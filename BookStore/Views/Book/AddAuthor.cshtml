@@ -1,0 +1,26 @@
+﻿@model BookAuthors
+@{
+    ViewData["Title"] = "AddAuthor";
+}
+<form method="post">
+
+
+<h1>AddAuthor</h1>
+<div>
+<h1 class="alert alert-danger">
+    All Authors
+</h1>
+ <select name="NotAuthors" asp-items="ViewBag.NotAuthors" multiple class="w-25 list-group-item-secondary text-center"></select>
+</div>
+    
+<div>
+    <h1 class="alert alert-danger">
+        Book Author
+    </h1>
+        <select name="Authors" asp-items="ViewBag.Authors" multiple class="w-25 list-group-item-primary text-center">
+        </select>
+</div>
+
+    <input type="submit" value="Add" class="btn btn-primary" />
+
+</form>

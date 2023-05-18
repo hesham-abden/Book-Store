@@ -1,0 +1,16 @@
+﻿@model BookAuthors
+@{
+    ViewData["Title"] = "AddOrder";
+}
+<h1>@ViewBag.Book.Title</h1>
+<h3>AddOrder</h3>
+
+<form method="post">
+    <select id="List" name="Authors" asp-items="ViewBag.Authors" class="w-25 list-group-item-secondary text-center"></select>
+    <label asp-for="Order"></label>
+    <input id="Selected" asp-for="Order"/>
+    <input type="submit" value="add" class="btn btn-primary" />
+</form>
+
+
+

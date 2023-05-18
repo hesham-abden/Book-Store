@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "AddRole";
+}
+
+<form method="post">
+
+
+    <h1>Add Role</h1>
+    <div>
+        <h1 class="alert alert-danger">
+            Available Roles
+        </h1>
+        <select name="roles" asp-items="ViewBag.roles" multiple class="w-25 list-group-item-secondary text-center"></select>
+    </div>
+
+    <div>
+        <h1 class="alert alert-danger">
+            My Roles
+        </h1>
+        <select name="mine" asp-items="ViewBag.mine" multiple class="w-25 list-group-item-primary text-center">
+        </select>
+    </div>
+
+    <input type="submit" value="Add" class="btn btn-primary" />
+
+</form>

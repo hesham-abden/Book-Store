@@ -1,0 +1,38 @@
+﻿@model List<BookAuthors>
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h1>Books</h1>
+
+<table class="table table-bordered table-hover text-center">
+    <thead>
+        <tr class="h-3 alert-danger">
+            <th>
+                Title
+            </th>
+            <th>
+                Publisher
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book.Publisher)
+            </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Book.Description)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

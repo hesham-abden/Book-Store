@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <a asp-action="Test" asp-controller="Home" class="h-100">
+        Session & Cookies
+    </a>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a class="offcanvas-header" asp-action="Index" asp-controller="Book">Books</a>
+        <a class="offcanvas-header" asp-action="Index" asp-controller="Author">Authors</a>
+        <a class="offcanvas-header" asp-action="Index" asp-controller="Review">Reviews</a>
+        <a class="offcanvas-header" asp-action="Index" asp-controller="Tag">Tags</a>
+        <a class="offcanvas-header" asp-action="Index" asp-controller="User">Users</a>
+    }
+    
+</div>
